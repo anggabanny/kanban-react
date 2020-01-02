@@ -26,7 +26,7 @@ class AddTask extends React.Component {
         return (
             <div className="p-2 m-5">
                 <input
-                    className="shadow appearance-none border rounded w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded md:w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="text"
                     placeholder="Task"
                     value={this.state.name}

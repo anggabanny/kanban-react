@@ -56,26 +56,26 @@ class Kanban extends React.Component {
         return (
             <div>
                 <Navbar />
-                <div>
+                <div className="text-center md:text-left">
                     <AddTask setName={val => this.addValue(val)} />
                 </div>
-                <div className="flex flex-row">
+                <div className="flex flex-col items-center md:items-start md:flex-row">
                     <Board
-                        width="w-1/3"
+                        width="w-2/3 md:w-1/3"
                         status="Todo"
                         taskList={this.state.taskList}
                         move={(data, status) => this.changeStatus(data, status)}
                         deleteTask={val => this.deleteTask(val)}
                     />
                     <Board
-                        width="w-1/3"
+                        width="w-2/3 md:w-1/3 mt-4 md:mt-0"
                         status="Doing"
                         taskList={this.state.taskList}
                         move={(data, status) => this.changeStatus(data, status)}
                         deleteTask={val => this.deleteTask(val)}
                     />
                     <Board
-                        width="w-1/3"
+                        width="w-2/3 md:w-1/3 mt-4 md:mt-0"
                         status="Done"
                         taskList={this.state.taskList}
                         move={(data, status) => this.changeStatus(data, status)}
